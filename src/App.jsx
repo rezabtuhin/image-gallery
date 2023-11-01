@@ -35,14 +35,15 @@ export default function App() {
                 <h1 className="font-bold">{textToShow}</h1>
                 <h1 className={`text-red-600 ${show} delete-btn`} onClick={deleteImage}>Delete files</h1>
             </div>
-            <div className="img-body p-4">
-                {image.map((img) => (
+            <div className="img-body p-4 grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-2">
+                {image.map((img, index) => (
                     <ImageContainer
                         key={img.id}
                         img={img.name}
                         imageId={img.id}
                         onCheckboxChange={handleCheckboxChange}
                         isChecked={deleteItem.includes(img.id)}
+                        index={index}
                     />
                 ))}
             </div>
