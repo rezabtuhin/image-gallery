@@ -8,7 +8,8 @@ const ImageContainer = (props) => {
     onCheckboxChange(imageId);
   };
   return (
-    <div className="image-container">
+      // eslint-disable-next-line react/prop-types
+    <div className={`image-container ${props.index === 0 ? "col-span-2 row-span-2" : ""}`}>
       <input
         type="checkbox"
         className="overlay-checkbox"

@@ -20,16 +20,16 @@ code {
     background-color: white;
     border-radius: 5px;
 }
-.img-body{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
-    gap: 10px;
-}
+/*.img-body{*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));*/
+/*    gap: 10px;*/
+/*}*/
 
-.image-container:first-child{
-    grid-column: span 2;
-    grid-row: span 2;
-}
+/*.image-container:first-child{*/
+/*    grid-column: span 2;*/
+/*    grid-row: span 2;*/
+/*}*/
 
 .image-container{
     position: relative;
@@ -40,8 +40,8 @@ code {
     display: none;
     position: absolute;
     top: 10px;
-    left: 10px; /* Adjust the left position as needed */
-    z-index: 1; /* This places the checkbox on top of the image */
+    left: 10px;
+    z-index: 1;
 }
 
 .image-container:hover .overlay-checkbox{
