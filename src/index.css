@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #eaedf4;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-white{
+    background-color: white;
+    border-radius: 5px;
+}
+.img-body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    gap: 10px;
+}
+
+.image-container:first-child{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.image-container{
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-checkbox {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Adjust the left position as needed */
+    z-index: 1; /* This places the checkbox on top of the image */
+}
+
+.image-container:hover .overlay-checkbox{
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.overlay-checkbox:checked{
+    display: block!important;
+}
+
+.overlay-checkbox:checked .image-container > img{
+    filter: brightness(1.2);
+}
+
+.image-container:hover img{
+    filter: brightness(0.5);
+    transition: all 0.2s ease-in-out;
+}
+
+.overlay-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0); /* White overlay with 0 opacity */
+    pointer-events: none; /* Allows interaction with the checkbox */
+    z-index: 1; /* Place the overlay above the image */
+}
+
+.overlay-checkbox:checked + .overlay-div {
+    background-color: rgba(255, 255, 255, 0.2); /* White overlay with 0.2 opacity when checkbox is checked */
+    transition: all 0.2s ease-in-out;
+}
+
+.overlay-checkbox:checked .image-container:hover img{
+    filter: brightness(1)!important;
+    transition: all 0.2s ease-in-out;
+}
+
+.delete-btn:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.image-container img{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.image-container{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
