@@ -95,12 +95,14 @@ code {
 .image-container img{
     background-color: white;
     border-radius: 10px;
+    border: 1px solid #ccc;
+
 }
 
-.image-container{
+/* .image-container{
     border: 1px solid #ccc;
     border-radius: 10px;
-}
+} */
 
 .upload-image{
     border: 1px solid #ccc;
