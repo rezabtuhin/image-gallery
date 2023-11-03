@@ -15,7 +15,6 @@ const ImageContainer = (props) => {
   const style = {
     transform: CSS.Transform.toString(transform),
     transition,
-    backgroundImage: `url(${props.img})`
   };
   // eslint-disable-next-line react/prop-types
   const { imageId, onCheckboxChange, isChecked } = props;
@@ -41,6 +40,7 @@ const ImageContainer = (props) => {
           /* eslint-disable-next-line react/prop-types */
           src={props.img}
           alt="image"
+          style={{borderRadius: `10px !important`}}
         />
       </div>
     </div>

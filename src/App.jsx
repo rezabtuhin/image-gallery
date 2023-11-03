@@ -91,10 +91,10 @@ export default function App() {
               />
             ))}
           </SortableContext>
-          <button className="upload-image flex flex-col items-center justify-center gap-7">
+          {/* <button className="upload-image flex flex-col items-center justify-center gap-7">
             <img src="./src/assets/icons/image.png" alt="" srcset="" />
             <h1>Add Images</h1>
-          </button>
+          </button> */}
         </div>
       </DndContext>
     </div>
