@@ -53,6 +53,10 @@ code {
     display: block!important;
 }
 
+.hidden-checkbox{
+    display: none;
+}
+
 .overlay-checkbox:checked .image-container > img{
     filter: brightness(1.2);
 }
@@ -96,4 +100,11 @@ code {
 .image-container{
     border: 1px solid #ccc;
     border-radius: 10px;
+}
+
+.upload-image{
+    border: 1px solid #ccc;
+    border-style: dashed;
+    border-radius: 10px;
+    min-height: 230px;
 }
